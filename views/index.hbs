@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+</head>
+<body>
+  {{>header}}
+  <form method="post" action="/">
+    <div>
+      <label for="msg">Message</label>
+      <input type="text" id="msg" name="msg">
+    </div>
+    <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" value="{{username}}">
+    </div>
+    <button type="submit">送信</button> 
+  </form>
+
+  <table>
+    <thead>
+      <tr><th>message</th><th>name</th><th>posted</th></tr>
+    </thead>
+  
+    <tbody>
+      {{#each data}}
+        <tr>
+          <td>{{msg}}</td>
+          <td>{{name}}</td>
+          <td>{{posted}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  {{>footer}}
+</body>
+</html>
