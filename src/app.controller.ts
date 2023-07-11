@@ -8,7 +8,6 @@ import {
   Session,
 } from '@nestjs/common';
 import { AppService } from './app.service';
-import { application } from 'express';
 import MsgData from './Msgdata';
 
 const msgs = [];
